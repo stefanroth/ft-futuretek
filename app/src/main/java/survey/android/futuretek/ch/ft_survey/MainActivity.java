@@ -80,18 +80,19 @@ public class MainActivity extends BaseActivity {
                     EditText userInput = ((EditText) v.findViewById(R.id.userInput));
                     userName = null;
                     try {
-                        userName = getDatabase().get("usersName");
+                        //userName = getDatabase().get("usersName");
+                        userName = userInput.getText().toString();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     if (userName == null || userName.isEmpty()) {
                         List<String> textArray = new ArrayList<String>(1);
                         textArray.add("Didn't get your name...");
-                        animateText(textArray, new AnimationListDone() {
+                        /* animateText(textArray, new AnimationListDone() {
                             public void done() {
                                 activateNextButton();
                             }
-                        });
+                        }); */
                     } else {
                         getDatabase().put("usersName", userName);
                         List<String> textArray = new ArrayList<String>(2);
