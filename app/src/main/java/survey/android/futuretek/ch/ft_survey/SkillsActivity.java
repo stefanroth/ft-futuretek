@@ -6,6 +6,7 @@
  */
 package survey.android.futuretek.ch.ft_survey;
 
+import android.content.Intent;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,6 +28,8 @@ public class SkillsActivity extends BaseActivity {
     private ListView listview;
     public List<String> _productlist = new ArrayList<String>();
     private ListAdapter adapter;
+    private Button addSkillBtn;
+    private String newSkill;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,24 @@ public class SkillsActivity extends BaseActivity {
         View mainTextView = findViewById(R.id.textLayout);
         mainTextView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            }
+        });
+
+        addSkillBtn = (Button) findViewById(R.id.addSkillBtn);
+        addSkillBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                openInputDialog(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        EditText userInput = ((EditText) v.findViewById(R.id.userInput));
+                        newSkill = null;
+                        try {
+                            newSkill = userInput.getText().toString();
+                        } catch(Exception exc) {
+                            exc.printStackTrace();
+                        }
+                        insertSkill(newSkill);
+                    }
+                });
             }
         });
 

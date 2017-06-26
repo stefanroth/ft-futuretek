@@ -20,6 +20,7 @@ import java.util.List;
 public class AboutFTActivity extends BaseActivity {
     private String userName;
     private Button nextBtn;
+    private Button addSkillBtn;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -31,7 +32,6 @@ public class AboutFTActivity extends BaseActivity {
                 startActivity(new Intent(AboutFTActivity.this, SkillsActivity.class));
             }
         });
-
     }
 
     protected void onResume() {
