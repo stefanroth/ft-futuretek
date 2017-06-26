@@ -1,0 +1,25 @@
+#Mon Jun 26 16:05:52 CEST 2017
+renamed.7=classes.dex
+renamed.6=classes5.dex
+renamed.5=classes2.dex
+renamed.4=classes4.dex
+renamed.3=classes8.dex
+renamed.2=classes7.dex
+renamed.1=classes3.dex
+renamed.0=classes6.dex
+base.7=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22c12d70d46ee14935c421f6cc9acc6daaead8bb
+base.6=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_af0ff8d4521238d936160fb4c8189c5ac5bddbd4
+base.5=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_348d61e439fa3e3bee1b33077b6c66062dcde61a
+base.4=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d3c07ffbcc1d8da4656337179cfb42260a762363
+base.3=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_0b09c3d921c02b7358bf159a5b29e23c1910893c
+base.2=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fdc5a7ec372c2d0f762aa92c0c4a42b877a67817
+base.1=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_15b8103b8e26cc0b6092f9d906e6d5c46d16691c
+base.0=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22abd6cd683e99dc8ea7ded0186c9d8ee8010b0c
+file.7=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22c12d70d46ee14935c421f6cc9acc6daaead8bb/classes.dex
+file.6=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_af0ff8d4521238d936160fb4c8189c5ac5bddbd4/classes.dex
+file.5=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_348d61e439fa3e3bee1b33077b6c66062dcde61a/classes.dex
+file.4=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d3c07ffbcc1d8da4656337179cfb42260a762363/classes.dex
+file.3=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_0b09c3d921c02b7358bf159a5b29e23c1910893c/classes.dex
+file.2=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fdc5a7ec372c2d0f762aa92c0c4a42b877a67817/classes.dex
+file.1=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_15b8103b8e26cc0b6092f9d906e6d5c46d16691c/classes.dex
+file.0=/home/rost/projects/rost/survey/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22abd6cd683e99dc8ea7ded0186c9d8ee8010b0c/classes.dex

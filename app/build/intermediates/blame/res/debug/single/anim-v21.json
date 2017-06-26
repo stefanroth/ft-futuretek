@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/rost/projects/rost/survey/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/home/rost/.android/build-cache/960e1218ce68ea5cedf080074fb87bd56e0b573a/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/rost/projects/rost/survey/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/home/rost/.android/build-cache/960e1218ce68ea5cedf080074fb87bd56e0b573a/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    }
+]
