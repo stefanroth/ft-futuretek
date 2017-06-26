@@ -6,7 +6,6 @@
  */
 package survey.android.futuretek.ch.ft_survey;
 
-import android.content.Intent;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -24,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SkillsActivity extends BaseActivity {
-    private Button btn_add;
     private ListView listview;
     public List<String> _productlist = new ArrayList<String>();
     private ListAdapter adapter;
@@ -43,18 +41,14 @@ public class SkillsActivity extends BaseActivity {
             }
         });
 
+        // Set the Button for the new Skill
         addSkillBtn = (Button) findViewById(R.id.addSkillBtn);
         addSkillBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 openInputDialog(new View.OnClickListener() {
                     public void onClick(View v) {
                         EditText userInput = ((EditText) v.findViewById(R.id.userInput));
-                        newSkill = null;
-                        try {
-                            newSkill = userInput.getText().toString();
-                        } catch(Exception exc) {
-                            exc.printStackTrace();
-                        }
+                        newSkill = userInput.getText().toString();
                         insertSkill(newSkill);
                     }
                 });
@@ -79,6 +73,8 @@ public class SkillsActivity extends BaseActivity {
     private class ListAdapter extends BaseAdapter {
         LayoutInflater inflater;
         ViewHolder viewHolder;
+        String oldId;
+        String newId;
 
         public ListAdapter(Context context) {
             inflater = LayoutInflater.from(context);
@@ -101,6 +97,23 @@ public class SkillsActivity extends BaseActivity {
                 convertView = inflater.inflate(R.layout.list_row, null);
                 viewHolder = new ViewHolder();
                 viewHolder.textView = (TextView) convertView.findViewById(R.id.textView1);
+                viewHolder.editBtn = (Button) convertView.findViewById(R.id.editBtn);
+                viewHolder.editBtn.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        // Get the Skill that is about to be updated
+                        ViewGroup row = ((ViewGroup)v.getParent());
+                        oldId = ((TextView)row.findViewById(R.id.textView1)).getText().toString();
+                        openInputDialog(new View.OnClickListener() {
+                            public void onClick(View v) {
+                                // Get new Skill
+                                EditText userInput = ((EditText) v.findViewById(R.id.userInput));
+                                newId = userInput.getText().toString();
+                                updateSkill(oldId, newId);
+                            }
+                        });
+
+                    }
+                });
                 viewHolder.delBtn = (Button) convertView.findViewById(R.id.deleteBtn);
                 viewHolder.delBtn.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
@@ -123,12 +136,25 @@ public class SkillsActivity extends BaseActivity {
     private class ViewHolder {
         TextView textView;
         Button delBtn;
+        Button editBtn;
 
     }
 
     private void insertSkill(String skill){
         try {
             getDatabase().putSkill(skill);
+            _productlist = getDatabase().getAllSkills();
+            adapter.notifyDataSetChanged();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updateSkill(String oldSkill, String newSkill){
+        try {
+            // Not a real Update
+            getDatabase().deleteSkill(oldSkill);
+            getDatabase().putSkill(newSkill);
             _productlist = getDatabase().getAllSkills();
             adapter.notifyDataSetChanged();
         } catch (Exception e) {
